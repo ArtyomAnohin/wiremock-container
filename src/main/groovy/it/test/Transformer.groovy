@@ -19,12 +19,12 @@ class Transformer extends ResponseDefinitionTransformer implements Extension {
                 return ResponseDefinitionBuilder
                         .like(response).but()
                         .withStatus(200)
-                        .withBody("CCC")
+                        .withBody("All mandatory fields exist")
                         .build()
             } else {
                 ResponseDefinitionBuilder
                         .like(response).but()
-                        .withStatus(401)
+                        .withStatus(400)
                         .withBody("No mandatory field Email")
                         .build()
             }
